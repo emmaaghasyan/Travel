@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap');
+
+:root {
+    --orange:#ffa500;
+    --grey:#333;
+    --white: #fff;
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin: 0px; padding: 0px;
+   box-sizing: border-box;
+   border: none;  outline: none;
+   text-transform: capitalize;
+   text-decoration: none;
+}
+
+*::selection {
+background: var(--orange);
+color: var(--white);
+}
+
+section {
+   padding: 1rem 5%;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+.btn {
+   display: inline-block;
+   background-color: var(--orange);
+   color: var(--white);
+   padding: .5rem 1.5rem;
+   cursor: pointer;
+   font-size: 1.1rem;
+   border: .2rem solid var(--orange);
+   text-align: center;
+}
+
+.btn:hover {
+   background: rgba(172, 143, 90, .3);
+   color: var(--orange);
+}
+
+.heading {
+   text-align: center;
+   margin: 3rem 0;
+}
+
+.heading span {
+   font-size: 3rem;
+   color: var(--orange);
+   background: rgba(255, 160, 0, .2);
+   border-radius: .2rem;
+   padding: .2rem .4rem;
+}
+
+.heading span.space {
+   background: none;
+}
+
+/* ....................... Header ....................... */
+
+header {
+   position: fixed;
+   top: 0px; left: 0px; right: 0px;
+   display: flex;
+   justify-content:space-between;
+   align-items: center;
+   background: var(--grey);
+   padding: 1rem 5%;
+   z-index: 1000;
+}
+
+header #menu-bar {
+   color: var(--white);
+   font-size: 1.5rem;
+   cursor: pointer;
+   border: .1rem solid var(--white);
+   padding: .5rem .7rem;
+   border-radius: .3rem;
+   display: none;
+}
+
+header #menu-bar:hover {
+   color: var(--orange);
+}
+
+header .logo span {
+    color: var(--orange);
+}
+
+header .logo {
+    font-size: 1.7rem;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header .navbar a {
+    color: var(--white);
+    font-size: 1.4rem;
+    padding: 0 .5rem;
+}
+
+header .navbar a:hover {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+header .icons i {
+    font-size: 1.4rem;
+    color: var(--white);
+    margin-right: .5rem;
+}
+
+header .icons i:hover {
+    color: var(--orange);
+    cursor: pointer;
+}
+
+header .searchbar {
+    position: absolute;
+    top: 100%; left: 0px; width: 100%;
+    background-color: var(--grey);
+    border-top: .1rem solid rgba(255, 255, 255, .2); 
+    display: flex;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .searchbar.active {
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+ header .searchbar input {
+    width: 100%;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 1.2rem;
+    color: var(--grey);
+    border-radius: .5rem;
+    text-transform: none;
+ }
+
+ header .searchbar input::placeholder {
+    text-transform: capitalize;
+ }
+
+ header .searchbar label {
+    color: var(--white);
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-right: .5rem;
+ }
+
+/* ....................... Login - Form ....................... */
+
+ .login-form {
+    position: fixed;
+    top: -120%; left: 0px; width: 100%;
+    background: rgba(0, 0, 0, .3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .login-form .active {
+   top: 0;
+ }
+
+ .login-form form {
+    background: var(--white);
+    padding: 1.2rem;
+    border-radius: .5rem;
+
+ }
+ .login-form form h3 {
+    font-size: 2.2rem;
+    color: var(--grey);
+    text-transform: uppercase;
+    text-align: center;
+ }
+
+ .login-form form input[type="email"],
+ .login-form form input[type="password"] {
+    width: 100%;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    margin: .3rem 0;
+    padding: .5rem;
+    font-size: 1.2rem;
+    color: var(--grey);
+    text-transform: none;
+ }
+
+ .login-form form input[type="email"]:focus,
+ .login-form form input[type="password"]:focus {
+    border-color: var(--orange);
+ }
+
+ .login-form form label {
+    font-size: 1.1rem;
+ }
+
+ .login-form form p {
+    font-size: 1rem;
+    color: var(--grey);
+    padding: .1rem 0;
+ }
+
+ .login-form form a {
+    color: var(--orange);
+ }
+ 
+ .login-form form p a:hover {
+    color: var(--grey);
+    text-decoration: underline;
+ }
+
+ .login-form i {
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+    color: var(--white);
+    font-size: 2rem;
+ }
+
+ .login-form form .btn {
+   width: 100%;
+   margin-bottom: .3rem;
+ }
+
+/* ....................... Home ....................... */
+
+.home {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.home video {
+   position: absolute;
+   top: 0; left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: -1;
+}
+
+.home .content {
+   text-align: center;
+   color: var(--white);
+}
+
+.home .content h1 {
+   font-size: 4rem;
+   text-transform: uppercase;
+}
+
+.home .content p {
+   font-size: 2rem;
+}
+
+/* ....................... Book ....................... */
+
+.book .inner {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.book .inner .image {
+   width: 49%;
+}
+
+.book .inner .image img {
+   width: 100%;
+}
+
+.book .inner form {
+   width: 49%;
+   box-shadow: 0 0 1rem rgba(0, 0, 0, .3);
+   border-radius: .5rem;
+   padding: 2.5rem;
+}
+
+.book .inner form .inputbox h3 {
+   color: var(--grey);
+   font-size: 1.5rem;
+   margin: .5rem 0;
+}
+
+.book .inner form .inputbox input {
+   width: 100%;
+   border: 1px solid rgba(0, 0, 0, .2);
+   font-size: 1.2rem;
+   color: var(--grey);
+   text-transform: none;
+   padding: .7rem;
+}
+
+.book .inner form .btn {
+   margin-top: .5rem;
+}
+
+/* ....................... Packages ....................... */
+
+.packages .inner {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 1rem;
+}
+
+.packages .inner .box {
+   width: 30%;
+   box-shadow: 0 0 .5rem rgba(0, 0, 0, .3);
+}
+
+.packages .inner .box img {
+   width: 100%;
+   height: 19rem;
+}
+
+.packages .inner .box .content {
+   padding: .8rem;
+}
+
+.packages .inner .box .content h4 {
+   font-size: 1.5rem;
+   color: var(--grey);
+}
+
+.packages .inner .box .content h4 i {
+   color: var(--orange);
+   font-size: 1.3rem;
+}
+
+.packages .inner .box .content p {
+   font-size: 1.2rem;
+   color: var(--grey);
+   font-style: italic;
+   font-weight: 700;
+}
+
+.packages .inner .box .content .stars {
+   font-size: 1rem;
+   color: var(--orange);
+}
+
+.packages .inner .box .content .price {
+   font-size: 1.1rem;
+   color: var(--grey);
+   margin: .2rem 0;
+}
+
+.packages .inner .box .content .price span {
+   font-size: 1rem;
+   color: #666;
+   text-decoration: line-through;
+}
+
+/* ....................... Services ....................... */
+
+.services .inner {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 1rem;
+}
+
+.services .inner .box {
+   width: 24%;
+   text-align: center;
+   padding: .8rem;
+}
+
+.services .inner .box:hover {
+   box-shadow: 0 0 2rem rgba(0, 0, 0, .3);
+   border-radius: .5rem;
+   cursor: pointer;
+}
+
+.services .inner .box i{
+   color: var(--orange);
+   font-size: 3rem;
+}
+
+.services .inner .box h3 {
+   font-size: 1.2rem;
+   color: var(--grey);
+}
+
+.services .inner .box p {
+   font-size: 1rem;
+   color: #666;
+}
+
+/* ....................... Gallery ....................... */
+
+.gallery .inner {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 1rem;
+}
+
+.gallery .inner .box {
+   width: 23%;
+   height: 15rem;
+   position: relative;
+   overflow: hidden;
+}
+
+.gallery .inner .box img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.gallery .inner .box .content {
+   position: absolute;
+   top: -150%; left: 0;
+   background: rgba(0, 0, 0, .5);
+   width: 100%; 
+   height: 100%;
+   text-align: center;
+   padding-top: 4rem;
+}
+
+.gallery .inner .box:hover .content {
+   top: 0; left: 0;
+   transition: .3s;
+}
+
+.gallery .inner .box .content h3 {
+   font-size: 1.5rem;
+   color: var(--orange);
+}
+
+.gallery .inner .box .content p {
+   font-size: 1.2rem;
+   color: var(--white);
+   padding-bottom: .2rem;
+}
+
+/* ....................... Contact ....................... */
+
+.contact .inner {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.contact .inner .image {
+   width: 49%;
+}
+
+.contact .inner .image img {
+   width: 100%;
+}
+
+.contact .inner form {
+   width:  49%;
+   box-shadow: 0 0 2rem rgba(0, 0, 0, .2);
+   padding: 1.7rem;
+   border-radius: .5rem;
+}
+
+.contact .inner form .inputbox {
+   display: flex;
+   justify-content: space-between;
+}
+
+.contact .inner form .inputbox input{
+   width: 49%;
+   background: rgba(0, 0, 0, .2);
+   padding: .5rem;
+   margin: .3rem 0;
+   font-size: 1.2rem;
+   text-transform: none;
+}
+
+.contact .inner form .inputbox input::placeholder {
+   text-transform: capitalize;
+}
+
+.contact .inner form textarea {
+   width: 100%;
+   background: rgba(0, 0, 0, .2);
+   padding:  .5rem;
+   font-size: 1.2rem;
+   text-transform: none;
+   resize: none;
+}
+
+.contact .inner form textarea::placeholder {
+   text-transform: capitalize;
+}
+
+/* ....................... Footer ....................... */
+
+footer {
+   background: var(--grey);
+}
+
+footer .inner {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 1rem;
+}
+
+footer .inner .box {
+   width: 23%;
+   padding: 1rem;
+}
+
+footer .inner .box h3 {
+   color: var(--white);
+   font-size: 1.5rem;
+}
+
+footer .inner .box p {
+   font-size: 1.1rem;
+   color: var(--white);
+}
+
+footer .inner .box a {
+   display: block;
+   font-size: 1.1rem;
+   color: var(--white);
+}
+
+footer .inner .box a:hover {
+   color: var(--orange);
+   text-decoration: underline;
+}
+
+footer .created {
+   text-align: center;
+   font-size: 1.3rem;
+   color: var(--white);
+   border-top: .1rem solid rgba(255, 255, 255, .2);
+   padding: 1rem 0;
+}
+
+footer .created a {
+   color: var(--orange);
+
+}
+
+footer .created a:hover {
+   text-decoration: underline;
+   color: var(--white);
+}
+
+
+@media(max-width: 1200px) {
+   section {
+      padding: 1rem .3rem;
+   }
+
+   .services .inner .box {
+      width: 23%;
+   }
+}
+
+
+@media(max-width: 979px) {
+   .book .inner .image {
+      display: none;
+   }
+
+   .book .inner form {
+      width: 85%;
+   }
+
+   .packages .inner .box {
+      width: 48%;
+   }
+
+   .gallery .inner .box {
+      width: 48%;
+   }
+
+   footer.inner .box {
+      padding: .5rem;
+   }
+}
+
+@media(max-width: 865px) {
+   header #menu-bar {
+      display: initial;
+   }
+
+   header .navbar {
+      position: absolute;
+      top: 100%; left: 0px; width: 100%;
+      background: var(--grey);
+      border-top: .1rem solid rgba(255, 255, 255, .2);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   header .navbar.active {
+      clip-path: polygon(0 0 , 100% 0, 100% 100%, 0 100%);
+   }
+
+   header .navbar a {
+      display: block;
+      background: #222;
+      margin: .5rem;
+      padding: .5rem;
+   }
+   
+}
+
+@media(max-width: 767px) {
+   .services .inner .box {
+      width: 48%;
+   }
+
+   .contact .inner .image {
+      display: none;
+   }
+   
+   .contact .inner form {
+      width: 80%;
+   }
+}
+
+
+
+
+
+
+
